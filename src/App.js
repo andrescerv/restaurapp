@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Navbar from './Components/Navbar/Navbar'
 import Footer  from './Components/Footer/Footer'
+import GetList from './Components/GetList/GetList'
 
 class App extends Component {
   render() {
@@ -9,17 +10,7 @@ class App extends Component {
       <div className="App">
         <Navbar/>
         <header className="App-header">
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <GetList/>
         </header>
         <Footer/>
       </div>
