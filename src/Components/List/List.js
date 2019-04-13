@@ -9,8 +9,10 @@ class List extends Component {
                 <h1>Amazing restaurants:</h1>
                 {restaurants.map((restaurant, name) => {
                     return <div>
-                        <h3>
+                        <h2>
                             {restaurant.name}, <br/>
+                        </h2>
+                        <h5>
                             {restaurant.rating}, <br/>
                             {restaurant.contact.site}, <br/>
                             {restaurant.contact.email}, <br/>
@@ -18,7 +20,7 @@ class List extends Component {
                             {restaurant.address.street}, <br/>
                             {restaurant.address.city}, <br/>
                             {restaurant.address.state} <br/>
-                        </h3>
+                        </h5>
                     </div> 
                 })}
             </div>
