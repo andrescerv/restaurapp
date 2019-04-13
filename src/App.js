@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Navbar from './Components/Navbar/Navbar'
 import Footer  from './Components/Footer/Footer'
-import GetList from './Components/GetList/GetList'
+import List from './Components/List/List'
+import Filter from './Components/Filter/Filter'
 
 class App extends Component {
   render() {
@@ -10,7 +11,8 @@ class App extends Component {
       <div className="App">
         <Navbar/>
         <header className="App-header">
-          <GetList/>
+          <Filter/>
+          <List/>
         </header>
         <Footer/>
       </div>
