@@ -11,8 +11,17 @@ class Restaurants extends Component {
                 {this.props.restaurantArray.map(restaurant => (
                     <RestaurantCard
                         key={restaurant.id}
-                        name={restaurant.name}
+                        id={restaurant.id}
                         rating={restaurant.rating}
+                        name={restaurant.name}
+                        site={restaurant.contact.site}
+                        email={restaurant.contact.email}
+                        phone={restaurant.contact.phone}
+                        street={restaurant.address.street}
+                        city={restaurant.address.city}
+                        state={restaurant.address.state}
+                        lat={restaurant.address.location.lat}
+                        lng={restaurant.address.location.lng}
                     />
                 ))}
             </ul>

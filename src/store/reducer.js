@@ -21,19 +21,19 @@ const reducer = (state = initialState, action) => {
     case 'SORT_A_TO_Z':
     console.log('Reducer says: list is supposed to be sorted from A to Z')
     return {  
-      restaurants: state.restaurants
+      restaurants: state.restaurants.sort((a,b) => (a.name > b.name) ? 1 : -1)
     }
     
     case 'SORT_Z_TO_A':
     console.log('Reducer says: list is supposed to be sorted from Z to A');
     return {
-      restaurants: state.restaurants
+      restaurants: state.restaurants.sort((a,b) => (a.name > b.name) ? -1 : 1)
     }
     
     case 'SORT_BY_POPULARITY':
     console.log('Reducer says: list is supposed to be sorted by popularity');
     return{
-      restaurants: state.restaurants
+      restaurants: state.restaurants.sort((a,b) => (a.rating > b.rating) ? 1 : -1)
     }
     
     default:
