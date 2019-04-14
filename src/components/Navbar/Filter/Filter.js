@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './Filter.css'
-import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import { Dropdown, DropdownToggle, DropdownMenu } from 'reactstrap';
+import SortNameAZ from './Actions/SortNameAZ'
+import SortNameZA from './Actions/SortNameZA'
+import SortRating from './Actions/SortRating'
 
 
 class Filter extends Component {
@@ -26,22 +29,12 @@ class Filter extends Component {
                 <div className="button">
                     <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
                         <DropdownToggle caret>
-                            Filter by name...
+                            Filter...
                         </DropdownToggle>
                         <DropdownMenu>
-                            <DropdownItem>From A to Z</DropdownItem>
-                            <DropdownItem>From Z to A</DropdownItem>
-                        </DropdownMenu>
-                    </Dropdown>
-                </div>
-                <div className="button">
-                    <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-                        <DropdownToggle caret>
-                            Filter by rating...
-                        </DropdownToggle>
-                        <DropdownMenu>
-                            <DropdownItem>From 4 to 0</DropdownItem>
-                            <DropdownItem>From 0 to 4</DropdownItem>
+                            <SortNameAZ/>
+                            <SortNameZA/>
+                            <SortRating/>
                         </DropdownMenu>
                     </Dropdown>
                 </div>
