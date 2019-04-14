@@ -6,37 +6,42 @@ const initialState = {
     restaurants: [ ]
   };
 
+// axios.get('https://s3-us-west-2.amazonaws.com/lgoveabucket/data_melp.json')
+// .then(res => {
+//   this.initialState({restaurants: res.data})
+//   console.log(initialState);
+// })
+// .catch(function(error) {
+//   console.log(error);
+// })
+
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case 'SORT_A_TO_Z':
-      return {
-          restaurants: state.restaurants.name.sort()
-      }
-
+    console.log('Reducer says: list is supposed to be sorted from A to Z')
+    return {  
+      restaurants: state.restaurants
+    }
+    
     case 'SORT_Z_TO_A':
-      return {
-          restaurants: state.restaurants.name.sort()
-      }
-
+    console.log('Reducer says: list is supposed to be sorted from Z to A');
+    return {
+      restaurants: state.restaurants
+    }
+    
     case 'SORT_BY_POPULARITY':
-      return{
-        restaurants: state.restaurants.rating.sort()
-      }
-  
+    console.log('Reducer says: list is supposed to be sorted by popularity');
+    return{
+      restaurants: state.restaurants
+    }
+    
     default:
-      return {
-        restaurants: state.restaurants.concat(data)
-      }
-    // return (
-    //   axios.get('https://s3-us-west-2.amazonaws.com/lgoveabucket/data_melp.json')
-    //   .then(res => {
-    //       this.setState({restaurants: res.data})
-    //   })
-    //   .catch(function (error) {
-    //       console.log(error)
-    //   })
-    // )
+    console.log(state)
+    console.log(state.restaurants);
+    return {
+      restaurants: state.restaurants.concat(data)
+    }
   }
 };
 

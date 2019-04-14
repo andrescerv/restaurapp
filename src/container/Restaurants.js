@@ -3,10 +3,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import RestaurantCard from '../components/RestaurantCard/RestaurantCard'
-import SortNameAZ from '../components/Navbar/Filter/Actions/SortNameAZ'
-import SortNameZA from '../components/Navbar/Filter/Actions/SortNameZA'
-import SortRating from '../components/Navbar/Filter/Actions/SortRating'
-import axios from 'axios'
 
 class Restaurants extends Component {
     render() {
@@ -25,29 +21,10 @@ class Restaurants extends Component {
 }
 
 const mapStateToProps = (state) => {
+    console.log(`The order of the restaurants is: ${state.restaurants}`)
     return {
         restaurantArray: state.restaurants
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        sortAZ: () => {
-            return dispatch({
-                type: 'SORT_A_TO_Z'
-            })
-        },
-        sortZA: () => {
-            return dispatch({
-                type: 'SORT_Z_TO_A'
-            })
-        },
-        sortRate: () => {
-            return dispatch({
-                type: 'SORT_BY_POPULARITY'
-            })
-        }
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Restaurants);
+export default connect(mapStateToProps)(Restaurants);
