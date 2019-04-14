@@ -3,7 +3,7 @@ import { DropdownItem } from 'reactstrap'
 
 const SortRating = (props) => (
     <div className="SortRating">
-        <DropdownItem onClick={props.sortRating}>rating</DropdownItem>
+        <DropdownItem onClick={props.sortRating}>popularity</DropdownItem>
     </div>
 );
 

@@ -9,27 +9,6 @@ import SortRating from '../components/Navbar/Filter/Actions/SortRating'
 import axios from 'axios'
 
 class Restaurants extends Component {
-
-    // constructor(props) {
-    //     super(props)
-    //     this.state = {restaurants: [
-    //         {name: ''},
-    //         {rating: ''}
-    //     ]}
-    //     console.log(`Initial value of state is ${this.state}`)
-    //     console.log(this.state)
-    // }
-
-    // componentDidMount(){
-    //     axios.get('https://s3-us-west-2.amazonaws.com/lgoveabucket/data_melp.json')
-    //     .then(res => {
-    //         this.setState({restaurants: res.data})
-    //     })
-    //     .catch(function (error) {
-    //         console.log(error)
-    //     })
-    // }
-
     render() {
         return ( 
             <ul>
@@ -39,8 +18,7 @@ class Restaurants extends Component {
                         name={restaurant.name}
                         rating={restaurant.rating}
                     />
-                )
-                )}
+                ))}
             </ul>
          );
     }

@@ -29,7 +29,7 @@ class Filter extends Component {
                 <div className="button">
                     <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
                         <DropdownToggle caret>
-                            Filter...
+                            Filter by...
                         </DropdownToggle>
                         <DropdownMenu>
                             <SortNameAZ/>
